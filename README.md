@@ -24,8 +24,8 @@ Benchmarks for python pyreadstat vs pandas read_sas for inporting sas7bdats
                                                                                                                                              
       paddas read_sas without chunksize                            78   * wonder if read_sas is looking for CR/LF on windows?                
                                                                                                                                              
-      paddas read_sas without chunksize=5000                                                                                                 
-      (5000 obs * 160 byte bhunk bytes=800k))                      94   * wonder if read_sas is looking for CR/LF on windows?                
+      paddas read_sas with chunksize=5000                                                                                                 
+      (5000 obs * 160 byte chunk bytes=800k))                      94   * wonder if read_sas is looking for CR/LF on windows?                
                                                                         * loops do not halp?                                                 
     Pyreadstat appears to be much faster than pandas read_sas.                                                                               
     I have also had good luck with pyreadstat write_xport.                                                                                   
